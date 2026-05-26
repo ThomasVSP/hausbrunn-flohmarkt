@@ -25,49 +25,56 @@
                     top: 0.0%;
                 }
                 .leaflet-container { font-size: 1rem; }
-                .share-panel {
+                .print-toolbar {
                     position: absolute;
                     left: 12px;
-                    bottom: 20px;
+                    top: 12px;
                     z-index: 1000;
                     background: rgba(255, 255, 255, 0.95);
                     border: 1px solid #bfc7d1;
                     border-radius: 8px;
                     padding: 8px;
                     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-                    text-align: center;
+                    display: flex;
+                    gap: 8px;
                 }
-                .share-panel .qr-title {
-                    font-size: 12px;
-                    font-weight: 600;
-                    margin-bottom: 6px;
-                    color: #17384f;
-                }
-                .share-panel img {
-                    display: block;
-                    width: 120px;
-                    height: 120px;
-                    border: 1px solid #d2d2d2;
-                }
-                .print-link {
-                    display: block;
-                    margin-top: 8px;
+                .print-toolbar a,
+                .print-toolbar button {
                     border: 1px solid #2e5f87;
                     background: #2e6fa3;
                     color: #ffffff;
                     border-radius: 6px;
-                    padding: 5px 8px;
-                    font-size: 12px;
+                    padding: 6px 10px;
+                    font-size: 13px;
                     text-decoration: none;
+                    cursor: pointer;
                 }
-                .print-link:hover {
+                .print-toolbar a:hover,
+                .print-toolbar button:hover {
                     background: #255a85;
-                    color: #ffffff;
-                    text-decoration: none;
+                }
+                .print-legal {
+                    display: none;
+                    position: absolute;
+                    left: 10mm;
+                    right: 10mm;
+                    bottom: 8mm;
+                    z-index: 1000;
+                    font-size: 9pt;
+                    line-height: 1.3;
+                    color: #1f1f1f;
+                    background: rgba(255, 255, 255, 0.9);
+                    padding: 2mm;
                 }
                 @media (max-width: 768px) {
-                    .share-panel {
-                        bottom: 78px;
+                    .print-toolbar {
+                        gap: 6px;
+                        padding: 6px;
+                    }
+                    .print-toolbar a,
+                    .print-toolbar button {
+                        font-size: 12px;
+                        padding: 5px 8px;
                     }
                 }
             </style>
@@ -77,6 +84,34 @@
                 height: 100%;
                 margin: 0;
                 padding: 0;
+            }
+
+            @media print {
+                @page {
+                    size: A4 landscape;
+                    margin: 8mm;
+                }
+
+                html, body {
+                    width: auto;
+                    height: auto;
+                    overflow: hidden;
+                    background: #ffffff;
+                }
+
+                #map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c {
+                    width: 100% !important;
+                    height: 180mm !important;
+                }
+
+                .print-toolbar,
+                .leaflet-control-zoom {
+                    display: none !important;
+                }
+
+                .print-legal {
+                    display: block;
+                }
             }
             </style>
 
@@ -100,11 +135,11 @@
     
     
             <div class="folium-map" id="map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c" ></div>
-            <div class="share-panel">
-                <div class="qr-title">Karte (QR)</div>
-                <img src="qr-code.png" alt="QR-Code zur Karte" />
-                <a class="print-link" href="print.html">Druckansicht</a>
+            <div class="print-toolbar">
+                <a href="index.html">Interaktive Karte</a>
+                <button type="button" onclick="window.print()">Drucken</button>
             </div>
+            <div class="print-legal">Kartenhintergrund: OpenStreetMap Mitwirkende. Karte: Hausbrunn Flohmarkt.</div>
         
 </body>
 <script>
