@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+                .share-panel {
+                    position: absolute;
+                    left: 12px;
+                    bottom: 12px;
+                    z-index: 1000;
+                    background: rgba(255, 255, 255, 0.95);
+                    border: 1px solid #bfc7d1;
+                    border-radius: 8px;
+                    padding: 8px;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+                    text-align: center;
+                }
+                .share-panel .qr-title {
+                    font-size: 12px;
+                    font-weight: 600;
+                    margin-bottom: 6px;
+                    color: #17384f;
+                }
+                .share-panel img {
+                    display: block;
+                    width: 120px;
+                    height: 120px;
+                    border: 1px solid #d2d2d2;
+                }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c" ></div>
+            <div class="share-panel">
+                <div class="qr-title">Karte (QR)</div>
+                <img
+                    src="https://api.qrserver.com/v1/create-qr-code/?size=260x260&data=https%3A%2F%2F1drv.ms%2Fu%2Fc%2Fa79596a3236a73b7%2FIQDyL-pFqMmJRpY7G2-esbRzAfhsVZMcqfirFQq8KVOt75o%3Fe%3DebIo21"
+                    alt="QR-Code zur Karte"
+                />
+            </div>
+        
+</body>
+<script>
+    
+    
+            var map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c = L.map(
+                "map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c",
+                {
+                    center: [48.627630983333326, 16.827002283333332],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+    "zoom": 16,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_191f9dfa6789fe1f4b13a4d392d124cd = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_191f9dfa6789fe1f4b13a4d392d124cd.addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+
+            var marker_749f8b2fc5ee2ad0acb82e5765f942b5 = L.marker(
+                [48.6263254, 16.8318237],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_f417d712a12e4dedab028b322d09c0c4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_64792f7482b8b6a75534c432577e0385 = $(`<div id="html_64792f7482b8b6a75534c432577e0385" style="width: 100.0%; height: 100.0%;">Schuh Nicole<br>Am Berg 153</div>`)[0];
+                popup_f417d712a12e4dedab028b322d09c0c4.setContent(html_64792f7482b8b6a75534c432577e0385);
+            
+        
+
+        marker_749f8b2fc5ee2ad0acb82e5765f942b5.bindPopup(popup_f417d712a12e4dedab028b322d09c0c4)
+        ;
+
+        
+    
+    
+            var marker_98ee2cb718a4750a4e640c3ec5bd63ce = L.marker(
+                [48.625217, 16.8321966],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_4268399a1424d848079957349c419aea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df9ebef267c695e0eb9cf9efc3cd8caf = $(`<div id="html_df9ebef267c695e0eb9cf9efc3cd8caf" style="width: 100.0%; height: 100.0%;">Nemetz Karin<br>Am Berg 187</div>`)[0];
+                popup_4268399a1424d848079957349c419aea.setContent(html_df9ebef267c695e0eb9cf9efc3cd8caf);
+            
+        
+
+        marker_98ee2cb718a4750a4e640c3ec5bd63ce.bindPopup(popup_4268399a1424d848079957349c419aea)
+        ;
+
+        
+    
+    
+            var marker_95466ea1356997f78c1445dc5d3722b5 = L.marker(
+                [48.6251853, 16.8327191],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_628cc31bab3f9cf1c045e085507b5219 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0528ec864546e0ec7b7a09b31f236b28 = $(`<div id="html_0528ec864546e0ec7b7a09b31f236b28" style="width: 100.0%; height: 100.0%;">Wetzenkircher Rosi<br>Am Berg 263</div>`)[0];
+                popup_628cc31bab3f9cf1c045e085507b5219.setContent(html_0528ec864546e0ec7b7a09b31f236b28);
+            
+        
+
+        marker_95466ea1356997f78c1445dc5d3722b5.bindPopup(popup_628cc31bab3f9cf1c045e085507b5219)
+        ;
+
+        
+    
+    
+            var marker_9758c29939218c99ea862067f64819eb = L.marker(
+                [48.6251853, 16.8327191],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_5dd635d4fd1e8bc80d2460f1a537acb9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f9df7225a8ea693fb59787bd8cc27e9 = $(`<div id="html_3f9df7225a8ea693fb59787bd8cc27e9" style="width: 100.0%; height: 100.0%;">Wagner Patrick<br>Am Berg 263</div>`)[0];
+                popup_5dd635d4fd1e8bc80d2460f1a537acb9.setContent(html_3f9df7225a8ea693fb59787bd8cc27e9);
+            
+        
+
+        marker_9758c29939218c99ea862067f64819eb.bindPopup(popup_5dd635d4fd1e8bc80d2460f1a537acb9)
+        ;
+
+        
+    
+    
+            var marker_846f9c5b61250052b61e05c8e9645219 = L.marker(
+                [48.6246059, 16.8336877],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_5737a2631e0e789d3448a07b0d511180 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_538e4d7fc329d010394ff6a8c07bcea6 = $(`<div id="html_538e4d7fc329d010394ff6a8c07bcea6" style="width: 100.0%; height: 100.0%;">Richter Gertraud und Robert<br>Am Berg 293</div>`)[0];
+                popup_5737a2631e0e789d3448a07b0d511180.setContent(html_538e4d7fc329d010394ff6a8c07bcea6);
+            
+        
+
+        marker_846f9c5b61250052b61e05c8e9645219.bindPopup(popup_5737a2631e0e789d3448a07b0d511180)
+        ;
+
+        
+    
+    
+            var marker_eb33c8e48a3ec296c03928aebdac59ac = L.marker(
+                [48.6297948, 16.8240203],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_32a6676c8c7f512a0543fa8edc6a5a49 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_331f9e549aeb3e0c88b1094db4844a83 = $(`<div id="html_331f9e549aeb3e0c88b1094db4844a83" style="width: 100.0%; height: 100.0%;">Weis Näherei/Hausdrache<br>Bahnzeile 494</div>`)[0];
+                popup_32a6676c8c7f512a0543fa8edc6a5a49.setContent(html_331f9e549aeb3e0c88b1094db4844a83);
+            
+        
+
+        marker_eb33c8e48a3ec296c03928aebdac59ac.bindPopup(popup_32a6676c8c7f512a0543fa8edc6a5a49)
+        ;
+
+        
+    
+    
+            var marker_993c2c4a0ad7194298c2a3e31ee0fe94 = L.marker(
+                [48.628582, 16.8231039],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_163fc7b52fe32c8ddd6b2ebf31b3acc9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d7f2d2f79ecf6ecdda133bda3ae6393 = $(`<div id="html_4d7f2d2f79ecf6ecdda133bda3ae6393" style="width: 100.0%; height: 100.0%;">Wunsch Sabine<br>Eichengasse 1</div>`)[0];
+                popup_163fc7b52fe32c8ddd6b2ebf31b3acc9.setContent(html_4d7f2d2f79ecf6ecdda133bda3ae6393);
+            
+        
+
+        marker_993c2c4a0ad7194298c2a3e31ee0fe94.bindPopup(popup_163fc7b52fe32c8ddd6b2ebf31b3acc9)
+        ;
+
+        
+    
+    
+            var marker_715060392028f61950958fa4ac0458c1 = L.marker(
+                [48.6294099, 16.8267399],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_1c54723b4b28bb6df541aa898cd6ca8a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_63487e94e18749ffe448d754b050bddd = $(`<div id="html_63487e94e18749ffe448d754b050bddd" style="width: 100.0%; height: 100.0%;">Dulle Robert<br>Hauptstraße 102</div>`)[0];
+                popup_1c54723b4b28bb6df541aa898cd6ca8a.setContent(html_63487e94e18749ffe448d754b050bddd);
+            
+        
+
+        marker_715060392028f61950958fa4ac0458c1.bindPopup(popup_1c54723b4b28bb6df541aa898cd6ca8a)
+        ;
+
+        
+    
+    
+            var marker_8c4ffb21843b2a5465dac99d9dffa0c1 = L.marker(
+                [48.6320955, 16.8230515],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_75b83c211d5d33d776342f033df0d08d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea6da7f3c47427437727ea928f3205ee = $(`<div id="html_ea6da7f3c47427437727ea928f3205ee" style="width: 100.0%; height: 100.0%;">Kunst Christine<br>Hauptstraße 462</div>`)[0];
+                popup_75b83c211d5d33d776342f033df0d08d.setContent(html_ea6da7f3c47427437727ea928f3205ee);
+            
+        
+
+        marker_8c4ffb21843b2a5465dac99d9dffa0c1.bindPopup(popup_75b83c211d5d33d776342f033df0d08d)
+        ;
+
+        
+    
+    
+            var marker_5e9157eb6ebd3fb1e205ca1a43f6d48e = L.marker(
+                [48.6336964, 16.818971],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_e82788196556eb354bba4f081f04a1f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_161f5b36462c275baf4812130f6965a3 = $(`<div id="html_161f5b36462c275baf4812130f6965a3" style="width: 100.0%; height: 100.0%;">Brenner Sonja<br>Hauptstraße 603</div>`)[0];
+                popup_e82788196556eb354bba4f081f04a1f5.setContent(html_161f5b36462c275baf4812130f6965a3);
+            
+        
+
+        marker_5e9157eb6ebd3fb1e205ca1a43f6d48e.bindPopup(popup_e82788196556eb354bba4f081f04a1f5)
+        ;
+
+        
+    
+    
+            var marker_ef22611ad77c2144212b66a63ab289d2 = L.marker(
+                [48.6342024, 16.8187415],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_69a0225d92a1be1822625b2af45366f4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_901c435475bb273abef2af6e5026e0d9 = $(`<div id="html_901c435475bb273abef2af6e5026e0d9" style="width: 100.0%; height: 100.0%;">Modliba Johanna<br>Hauptstraße 636</div>`)[0];
+                popup_69a0225d92a1be1822625b2af45366f4.setContent(html_901c435475bb273abef2af6e5026e0d9);
+            
+        
+
+        marker_ef22611ad77c2144212b66a63ab289d2.bindPopup(popup_69a0225d92a1be1822625b2af45366f4)
+        ;
+
+        
+    
+    
+            var marker_0142fdff8573a8082351af386693a4f7 = L.marker(
+                [48.6346217, 16.8180254],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_843508a6926f00413c11982e9bbe4a3b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6a4c11e7d23e4f238dd8fc47767d4d4 = $(`<div id="html_b6a4c11e7d23e4f238dd8fc47767d4d4" style="width: 100.0%; height: 100.0%;">Klotz Sandra<br>Hauptstraße 644</div>`)[0];
+                popup_843508a6926f00413c11982e9bbe4a3b.setContent(html_b6a4c11e7d23e4f238dd8fc47767d4d4);
+            
+        
+
+        marker_0142fdff8573a8082351af386693a4f7.bindPopup(popup_843508a6926f00413c11982e9bbe4a3b)
+        ;
+
+        
+    
+    
+            var marker_8b89d4585b4418f19033c7dc02b5a8bf = L.marker(
+                [48.6320994, 16.8254154],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_a92284e3ece4ec23bfa3df815bbd5686 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7bc4c6d272ef33bd03cf2f04ccd55af4 = $(`<div id="html_7bc4c6d272ef33bd03cf2f04ccd55af4" style="width: 100.0%; height: 100.0%;">Moser Werner<br>Hohlweg 214</div>`)[0];
+                popup_a92284e3ece4ec23bfa3df815bbd5686.setContent(html_7bc4c6d272ef33bd03cf2f04ccd55af4);
+            
+        
+
+        marker_8b89d4585b4418f19033c7dc02b5a8bf.bindPopup(popup_a92284e3ece4ec23bfa3df815bbd5686)
+        ;
+
+        
+    
+    
+            var marker_3588013f904a9e8f47bd140433438f8b = L.marker(
+                [48.6228923, 16.8317299],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_e06e717b65fbf36a9837ede2f4e234d9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_073eb6097c9a9d46825217a4338f0228 = $(`<div id="html_073eb6097c9a9d46825217a4338f0228" style="width: 100.0%; height: 100.0%;">Schmid Barbara<br>Holzlisstraße 448</div>`)[0];
+                popup_e06e717b65fbf36a9837ede2f4e234d9.setContent(html_073eb6097c9a9d46825217a4338f0228);
+            
+        
+
+        marker_3588013f904a9e8f47bd140433438f8b.bindPopup(popup_e06e717b65fbf36a9837ede2f4e234d9)
+        ;
+
+        
+    
+    
+            var marker_2271cb9562eadd69217cbe6c71f58674 = L.marker(
+                [48.6241804, 16.8269905],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_d81dbf8b579c34cb3795cd83e8d1970d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8076edda143d5a58479cd2c9be63581 = $(`<div id="html_e8076edda143d5a58479cd2c9be63581" style="width: 100.0%; height: 100.0%;">Arzt Maria<br>Holzlisstraße 507</div>`)[0];
+                popup_d81dbf8b579c34cb3795cd83e8d1970d.setContent(html_e8076edda143d5a58479cd2c9be63581);
+            
+        
+
+        marker_2271cb9562eadd69217cbe6c71f58674.bindPopup(popup_d81dbf8b579c34cb3795cd83e8d1970d)
+        ;
+
+        
+    
+    
+            var marker_034162c98b104fbdfa9a805c73a87c9a = L.marker(
+                [48.6221851, 16.833007],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_5665744e8d71c40ca2201339d33af9d0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8eea78d3f91734f72983505ddae5b51c = $(`<div id="html_8eea78d3f91734f72983505ddae5b51c" style="width: 100.0%; height: 100.0%;">Holik Doris<br>Holzlisstraße 544</div>`)[0];
+                popup_5665744e8d71c40ca2201339d33af9d0.setContent(html_8eea78d3f91734f72983505ddae5b51c);
+            
+        
+
+        marker_034162c98b104fbdfa9a805c73a87c9a.bindPopup(popup_5665744e8d71c40ca2201339d33af9d0)
+        ;
+
+        
+    
+    
+            var marker_3edc66dc1b530c3f66b983446515b3da = L.marker(
+                [48.6243191, 16.8268111],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_2ce48051668b6cc6eb8efd5de798475c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b4d4088d8a14a44c6fa9de9103f5c30 = $(`<div id="html_3b4d4088d8a14a44c6fa9de9103f5c30" style="width: 100.0%; height: 100.0%;">Bartl Günther<br>Holzlisstraße 609</div>`)[0];
+                popup_2ce48051668b6cc6eb8efd5de798475c.setContent(html_3b4d4088d8a14a44c6fa9de9103f5c30);
+            
+        
+
+        marker_3edc66dc1b530c3f66b983446515b3da.bindPopup(popup_2ce48051668b6cc6eb8efd5de798475c)
+        ;
+
+        
+    
+    
+            var marker_e4052527c8e41ff06b699f53dc4a6186 = L.marker(
+                [48.6235147, 16.8302005],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_19d09c840b0e971a7cacbbfafce72d4c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d3d1ac0cbc9eb88d585a2521316e2c72 = $(`<div id="html_d3d1ac0cbc9eb88d585a2521316e2c72" style="width: 100.0%; height: 100.0%;">Christ Claudia<br>Holzlisstraße 645</div>`)[0];
+                popup_19d09c840b0e971a7cacbbfafce72d4c.setContent(html_d3d1ac0cbc9eb88d585a2521316e2c72);
+            
+        
+
+        marker_e4052527c8e41ff06b699f53dc4a6186.bindPopup(popup_19d09c840b0e971a7cacbbfafce72d4c)
+        ;
+
+        
+    
+    
+            var marker_b4a1153a0a096ab4af8e5ed427f5e664 = L.marker(
+                [48.6238898, 16.8340776],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_aba387af37863b683a3424ad9503bead = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27105fbcbe7537c45bb9580807457a55 = $(`<div id="html_27105fbcbe7537c45bb9580807457a55" style="width: 100.0%; height: 100.0%;">Gaier Karin<br>Rabensburgerstraße 260</div>`)[0];
+                popup_aba387af37863b683a3424ad9503bead.setContent(html_27105fbcbe7537c45bb9580807457a55);
+            
+        
+
+        marker_b4a1153a0a096ab4af8e5ed427f5e664.bindPopup(popup_aba387af37863b683a3424ad9503bead)
+        ;
+
+        
+    
+    
+            var marker_2d25532ae3d6cd1d4fc6e3c9a98d297c = L.marker(
+                [48.6316637, 16.8227499],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_ab6c23c6e057661e1f402d5be6f6619c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8ce696fe8e27cec59c1ad6817751d02 = $(`<div id="html_b8ce696fe8e27cec59c1ad6817751d02" style="width: 100.0%; height: 100.0%;">König Margit<br>Vorgartenstraße 432</div>`)[0];
+                popup_ab6c23c6e057661e1f402d5be6f6619c.setContent(html_b8ce696fe8e27cec59c1ad6817751d02);
+            
+        
+
+        marker_2d25532ae3d6cd1d4fc6e3c9a98d297c.bindPopup(popup_ab6c23c6e057661e1f402d5be6f6619c)
+        ;
+
+        
+    
+    
+            var marker_ffdbc33ceff9c1ef0538466624fcf7ee = L.marker(
+                [48.6324152, 16.820896],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_7ca2ab58b355f2db6acd52f367dae243 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8ebb2e5da2bb77c682609c613f561bb = $(`<div id="html_d8ebb2e5da2bb77c682609c613f561bb" style="width: 100.0%; height: 100.0%;">Scharinger Natascha<br>Vorgartenstraße 439</div>`)[0];
+                popup_7ca2ab58b355f2db6acd52f367dae243.setContent(html_d8ebb2e5da2bb77c682609c613f561bb);
+            
+        
+
+        marker_ffdbc33ceff9c1ef0538466624fcf7ee.bindPopup(popup_7ca2ab58b355f2db6acd52f367dae243)
+        ;
+
+        
+    
+    
+            var marker_9e98a191bef42f4fb5e74ee0ba16ef3a = L.marker(
+                [48.6272298, 16.8232905],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_18a2064af2258da03d0f493cf0f2c3ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d507eb093a1c22f8a02109eac9a7236a = $(`<div id="html_d507eb093a1c22f8a02109eac9a7236a" style="width: 100.0%; height: 100.0%;">Wölfel Michaela<br>Waldsiedlung 621</div>`)[0];
+                popup_18a2064af2258da03d0f493cf0f2c3ad.setContent(html_d507eb093a1c22f8a02109eac9a7236a);
+            
+        
+
+        marker_9e98a191bef42f4fb5e74ee0ba16ef3a.bindPopup(popup_18a2064af2258da03d0f493cf0f2c3ad)
+        ;
+
+        
+    
+    
+            var marker_04b0fcdc78bee16c79dc257ab3cb27f9 = L.marker(
+                [48.6264321, 16.8221194],
+                {
+}
+            ).addTo(map_b1dd8a6e3b3d601fe5fc2f9cdf979f4c);
+        
+    
+        var popup_d5a0dadcd1376fb37027d6b47c86c738 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b32db628f0635088357431707039ea8d = $(`<div id="html_b32db628f0635088357431707039ea8d" style="width: 100.0%; height: 100.0%;">Fragner Doris<br>Waldsiedlung 628</div>`)[0];
+                popup_d5a0dadcd1376fb37027d6b47c86c738.setContent(html_b32db628f0635088357431707039ea8d);
+            
+        
+
+        marker_04b0fcdc78bee16c79dc257ab3cb27f9.bindPopup(popup_d5a0dadcd1376fb37027d6b47c86c738)
+        ;
+
+        
+    
+</script>
+</html>
