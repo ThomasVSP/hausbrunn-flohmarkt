@@ -57,7 +57,7 @@
                     display: none;
                     position: absolute;
                     left: 10mm;
-                    right: 10mm;
+                    right: 42mm;
                     bottom: 8mm;
                     z-index: 1000;
                     font-size: 9pt;
@@ -65,6 +65,22 @@
                     color: #1f1f1f;
                     background: rgba(255, 255, 255, 0.9);
                     padding: 2mm;
+                }
+                .print-qr {
+                    display: none;
+                    position: absolute;
+                    right: 10mm;
+                    bottom: 8mm;
+                    z-index: 1000;
+                    background: rgba(255, 255, 255, 0.95);
+                    border: 1px solid #bfc7d1;
+                    border-radius: 4px;
+                    padding: 2mm;
+                }
+                .print-qr img {
+                    width: 26mm;
+                    height: 26mm;
+                    display: block;
                 }
                 @media (max-width: 768px) {
                     .print-toolbar {
@@ -112,6 +128,10 @@
                 .print-legal {
                     display: block;
                 }
+
+                .print-qr {
+                    display: block;
+                }
             }
             </style>
 
@@ -140,6 +160,7 @@
                 <button type="button" onclick="window.print()">Drucken</button>
             </div>
             <div class="print-legal">Kartenhintergrund: OpenStreetMap Mitwirkende. Karte: Hausbrunn Flohmarkt.</div>
+            <div class="print-qr"><img src="qr-code.png" alt="QR-Code zur Karte" /></div>
         
 </body>
 <script>
